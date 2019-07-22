@@ -43,7 +43,7 @@ function availableItems() {
         var itemId = parseFloat(answers.id);
         console.log("ID chosen: " + itemId);
         var originalQuantity = parseFloat(answers.quantity);
-        console.log("You chose " + itemQuantity + " units for purchase");
+        console.log("You chose " + originalQuantity + " units for purchase");
         
         // Function to verify if selected number of units are available
         connection.query("SELECT stock_quantity FROM products WHERE item_id=?", [itemId], function(err, res){
